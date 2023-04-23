@@ -1,0 +1,54 @@
+/** Buttons START */
+
+.btn {
+	display: inline-block;
+	min-width: 200px;
+	margin-left: auto;
+	padding: 10px 10px;
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	border: 2px solid;
+	border-radius: 20px;
+	transition: .3s;
+}
+
+.btn-primary {
+	color: $gray-1;
+	background-color: $primary;
+	border-color: $primary;
+
+	&:hover,
+	&:focus {
+		color: $gray-1;
+		background-color: $primary-dark;
+		border-color: $primary-dark;
+	}
+
+	&:disabled {
+		color: #8E8E8E;
+		background-color: #DADADA;
+		border-color: #DADADA;
+		box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+		cursor: auto;
+	}
+}
+
+.btn-white-outline {
+	color: $white;
+	background-color: transparent;
+	border-color: $white;
+
+	&:hover,
+	&:focus {
+		color: $gray-1;
+		background-color: $primary;
+		border-color: $primary;
+	}
+}
+
+// Offsets
+* + .btn-group-1 { margin-top: 36px }
+
+/** Buttons END */

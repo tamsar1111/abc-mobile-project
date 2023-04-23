@@ -1,0 +1,191 @@
+/** Quiz START */
+
+.quiz {
+	min-height: calc(100vh - 48px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 40px 0;
+}
+
+.quiz > * + * {
+	margin-top: 20px;
+}
+
+.quiz-progress {
+	position: relative;
+	height: 11px;
+	background-color: rgba(242, 243, 243, 0.55);
+	border-radius: 11px;
+}
+
+.quiz-progress-bar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	background-color: #3BDE7C;
+	border-radius: inherit;
+	content: '';
+	transition: .3s;
+}
+
+.quiz-question {
+	font-size: 20px;
+	text-align: center;
+}
+
+.quiz-footer {
+	text-align: center;
+}
+
+* + .quiz-answers {
+	margin-top: 25px;
+}
+
+// Quiz input list
+.quiz-input-list {
+	text-align: center;
+}
+
+.quiz-input-list label {
+	position: relative;
+	display: block;
+	text-align: left;
+}
+
+.quiz-input-list * + label { margin-top: 20px }
+.quiz-input-list label + label { margin-top: 10px }
+
+.quiz-input-list input {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	left: 30px;
+	border-radius: 50%;
+	border: 1px solid $white;
+	appearance: none;
+	transform: translateY( -50% );
+	transition: .3s;
+}
+
+.quiz-input-list span {
+	display: block;
+	padding: 10px 10px 10px 80px;
+	color: $white;
+	background-color: rgba(242, 243, 243, 0.15);
+	transition: .3s;
+}
+
+.quiz-input-list input:checked {
+	background-color: #2950C2;
+	border-color: $gray-1;
+}
+
+.quiz-input-list input:checked + span {
+	color: $gray-1;
+	background-color: $primary;
+}
+
+// Quiz colors
+.quiz-colors {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 420px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.quiz-colors label {
+	width: 33.333%;
+	flex: 1 0 33.333%;
+	padding: 10px;
+}
+
+.quiz-colors input {
+	display: block;
+	width: 100%;
+	padding-top: 100%;
+	appearance: none;
+	transition: .3s;
+	cursor: pointer;
+}
+
+.quiz-colors input:checked {
+	box-shadow: inset 0 0 0 4px $primary;
+}
+
+// Quiz image test
+.quiz-image-test {
+	text-align: center;
+}
+
+.quiz-block-list {
+	display: flex;
+	justify-content: space-evenly;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.quiz-block-list label {
+	position: relative;
+}
+
+.quiz-block-list input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	appearance: none;
+	cursor: pointer;
+}
+
+.quiz-block-list span {
+	display: inline-block;
+	line-height: 41px;
+	min-width: 41px;
+	color: $gray-1;
+	background-color: $white;
+	transition: .3s;
+}
+
+.quiz-block-list input:checked + span {
+	box-shadow: inset 0 0 0 4px $primary;
+}
+
+* + .quiz-block-list { margin-top: 20px }
+
+// Quiz calc
+[class*='quiz-calc'] {
+	text-align: center;
+}
+
+.quiz-calc-title {
+	font-size: 23px;
+	line-height: 1.2;
+}
+
+.quiz-calc-loader::before {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	content: '';
+	border: 3px solid #3BDE7C;
+	border-radius: 50%;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	animation: cssload-spin .88s infinite linear
+}
+
+* + .quiz-calc-loader { margin-top: 20px }
+* + .quiz-calc-text { margin-top: 20px }
+
+@keyframes cssload-spin {
+	100% { transform: rotate( 360deg ) }
+}
+
+/** Quiz END */

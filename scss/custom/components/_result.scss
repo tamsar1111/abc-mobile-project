@@ -1,0 +1,77 @@
+/** Result START */
+
+.result-title-1 {
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.result-text-1 {
+	font-size: 13px;
+	line-height: 1.36;
+}
+
+.result-title-2 {
+	font-size: 18px;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	color: $secondary;
+}
+
+.result-text-boxed {
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 16px 20px;
+	font-size: 8px;
+	line-height: 2.5;
+	letter-spacing: 2px;
+	background-color: #1C2741;
+	border-radius: 6px;
+	text-transform: uppercase;
+}
+
+.result-title-3 {
+	font-size: 11px;
+	color: $secondary;
+	letter-spacing: .1em;
+}
+
+* + .result-text-1 { margin-top: 9px }
+* + .result-title-2 { margin-top: 19px }
+* + .result-text-boxed { margin-top: 12px }
+* + .result-title-3 { margin-top: 12px }
+
+// Call results
+.call-button {
+	display: inline-flex;
+	align-items: center;
+	padding: 20px 20px;
+	font-weight: 700;
+	font-size: 15px;
+	text-align: left;
+	color: $white;
+	background-color: #EB1B00;
+	border: none;
+	border-radius: 5px;
+	transition: .5s;
+
+	&:hover,
+	&:focus {
+		color: $gray-1;
+		background-color: $primary;
+	}
+}
+
+.call-table {
+	width: 100%;
+}
+
+.call-table td {
+	padding: 8px;
+	background-color: $gray-1;
+}
+
+* + .call-results { margin-top: 20px }
+
+/** Result END */

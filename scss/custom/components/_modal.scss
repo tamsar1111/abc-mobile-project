@@ -1,0 +1,64 @@
+/** @section Modal */
+
+$modalNames: ['junior', 'constructor'];
+
+@each $name in $modalNames {
+	.modal-#{$name} {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px;
+		background-color: rgba( 0, 0, 0, .4 );
+		opacity: 0;
+		visibility: hidden;
+		transition: $transition-base;
+
+		&.show {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.modal-#{$name}-inner {
+		max-height: 100%;
+		max-width: 500px;
+		background-color: white;
+		overflow-y: auto;
+
+		> * + * {
+			border-top: 1px solid #ccc;
+		}
+	}
+
+	.modal-#{$name}-header {
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.modal-#{$name}-body {
+		padding: 20px;
+	}
+
+	.modal-#{$name}-footer {
+		padding: 20px;
+	}
+
+	&.modal-#{$name}-static {
+		.modal-#{$name}-inner {
+			animation: modalBounce .5s;
+		}
+	}
+}
+
+@keyframes modalBounce {
+	0% { transform: scale( 1 ) }
+	50% { transform: scale( 1.05 ) }
+	100% { transform: scale( 1 ) }
+}

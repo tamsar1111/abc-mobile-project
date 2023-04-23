@@ -1,0 +1,21 @@
+/** Intro START */
+
+.intro-text-1 {
+	font-size: 17px;
+}
+
+.intro-title {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $primary;
+}
+
+.intro-text-2 {
+	font-weight: 700;
+	font-size: 14px;
+}
+
+* + .intro-title { margin-top: 15px }
+* + .intro-text-2 { margin-top: 22px }
+
+/** Intro END */

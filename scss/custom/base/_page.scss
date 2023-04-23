@@ -1,0 +1,121 @@
+/** Page START */
+
+body {
+	font-weight: 400;
+	font-family: 'Merriweather', serif;
+	font-size: 15px;
+	line-height: 1.27;
+	letter-spacing: .05em;
+	color: $white;
+	background-color: $gray-1;
+}
+
+.page {
+	padding-top: 48px;
+	overflow-x: hidden;
+}
+
+// Sections
+.section-md {
+	padding: 40px 0;
+}
+
+.section-fullheight {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: calc( 100vh - 48px );
+}
+
+// Grid
+.container {
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+// Typography
+h1, .h1 {
+	font-size: 30px;
+	line-height: 1.2;
+}
+
+// 18 30 15 16 20 14
+
+h2, .h2 {
+
+}
+
+h3, .h3 {
+
+}
+
+h4, .h4 {
+	font-size: 20px;
+}
+
+h5, .h5 {
+	font-size: 18px;
+}
+
+h6, .h6 {
+	font-size: 16px;
+}
+
+.fw-bold {
+	font-weight: 700;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-primary {
+	color: $primary;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-start {
+	text-align: left;
+}
+
+.text-block-1 {
+	line-height: 1.58;
+}
+
+.text-block-2 {
+	padding: 30px 15px;
+	color: $gray-1;
+	background-color: rgba(243, 243, 242, 0.8);
+	border-radius: 20px;
+}
+
+// Backgrounds
+.bg-image {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.bg-image-repeat {
+	background-position: center center;
+}
+
+.bg-white {
+		background-color: $white;
+}
+
+.context-light {
+	color: $gray-1;
+}
+
+// Offsets
+.text-block-1 + img { margin-top: 26px }
+* + .text-block-2 { margin-top: 26px }
+
+/** Page END */

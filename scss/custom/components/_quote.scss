@@ -1,0 +1,27 @@
+/** Quote START */
+
+.quote {
+	position: relative;
+	padding: 30px 15px;
+	font-size: 18px;
+}
+
+.quote::before,
+.quote::after {
+	position: absolute;
+	font-size: 80px;
+}
+
+.quote::before {
+	left: -50px;
+	top: -10px;
+	content: '\301D';
+}
+
+.quote::after {
+	right: -40px;
+	bottom: -40px;
+	content: '\301E';
+}
+
+/** Quote END */
